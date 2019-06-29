@@ -1,0 +1,10 @@
+<hello name="{{ name }}"></hello>
+<app-heading-message ></app-heading-message> 
+<nav>
+<ng-container *ngFor="let link of links; let i = index">
+ || <a  routerLink={{link.url}} routerLinkActive="active"> {{link.name}}</a>
+</ng-container>
+
+ 
+</nav>
+<router-outlet></router-outlet>

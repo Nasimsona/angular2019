@@ -1,0 +1,28 @@
+<!--tr *ngFor="let e of employeelist">{{e.id}}| {{e.employee_name}}</tr-->
+
+
+<table mat-table [dataSource]="employeelist" class="mat-elevation-z10">
+
+  <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+  <!-- Position Column -->
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef> No. </th>
+    <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef> Name </th>
+    <td mat-cell *matCellDef="let element"> {{element.employee_name}} </td>
+  </ng-container>
+ <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  
+</table>
+<p>
+<button mat-raised-button (click)="getEmployeecount()">Get Employee Count</button>
+
+</p>
+<p> Total number of employee={{employeecount}}</p>
