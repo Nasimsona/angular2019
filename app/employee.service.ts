@@ -19,7 +19,7 @@ export class EmployeeService {
    
   }*/
  private listemp :Employee[]=[{"id":"73634","employee_name":"yuuuniia","employee_salary":"12131212","employee_age":"1312","profile_image":""},
- {"id":"74634","employee_name":"Nile","employee_salary":"12131212","employee_age":"1312","profile_image":""}];
+ {"id":"74634","employee_name":"Nile","employee_salary":"12131212","employee_age":"1312","profile_image":""},{"id":"74333","employee_name":"Ari Ari","employee_salary":"12131212","employee_age":"1312","profile_image":""}];
   getEmployees():Employee[]{
 
     return this.listemp;
