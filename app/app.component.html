@@ -1,10 +1,26 @@
 <hello name="{{ name }}"></hello>
 <app-heading-message ></app-heading-message> 
-<nav>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <!-- Brand/logo -->
+  <a class="navbar-brand" href="#">NaXM</a>
+  
+  <!-- Links -->
+  <ul class="navbar-nav"  *ngFor="let link of links; let i = index" >
+    <li class="nav-item">
+      <a class="nav-link"  routerLink={{link.url}} routerLinkActive="active">{{link.name}}</a>
+    </li>
+   
+  </ul>
+</nav>
+<!--nav>
 <ng-container *ngFor="let link of links; let i = index">
- || <a  routerLink={{link.url}} routerLinkActive="active"> {{link.name}}</a>
+ <a  routerLink={{link.url}} routerLinkActive="active"> 
+ <button mat-button >{{link.name}}</button>
+</a>
+
 </ng-container>
 
  
-</nav>
+</nav-->
 <router-outlet></router-outlet>
