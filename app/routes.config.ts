@@ -9,6 +9,6 @@ export const appRoutes: Routes = [
   { path: 'Home', component: AppComponent },
   { path: 'Hello', component: HelloComponent },
   { path:'Employee',component:EmployeeListComponent},
-  { path:'ReactiveForm',component:TemplatedrivenComponent}
+  { path:'Template',component:TemplatedrivenComponent}
    
 ];

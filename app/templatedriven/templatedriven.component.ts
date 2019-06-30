@@ -19,4 +19,11 @@ export class TemplatedrivenComponent implements OnInit {
     });   
   }
 
+  onSubmit()
+  {
+    //alert("sumbitted");
+    console.log(this.user);
+
+  }
+
 }
