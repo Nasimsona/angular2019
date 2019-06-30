@@ -9,7 +9,7 @@ import { ILink} from './ilink';
   styleUrls: [ './app.component.css' ]
 })
 export class AppComponent implements OnInit {
-  name = 'Angular 8';
+  name = 'Angular';
   links:ILink[];
   
 
