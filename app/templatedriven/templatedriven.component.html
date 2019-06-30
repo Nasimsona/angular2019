@@ -9,6 +9,9 @@
     <div *ngIf="name.errors.minlength">
     Name must be at least 4 characters long.
   </div>
+  <div *ngIf="name.errors.required">
+    Name is must.
+  </div>
   </div>
 
   <label for="gender" class="mr-sm-2">Gender:</label>
