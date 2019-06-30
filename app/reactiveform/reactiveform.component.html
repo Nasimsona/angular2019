@@ -11,6 +11,9 @@
   <div *ngIf="profileForm.get('firstName').errors.required">
     First Name is required.
   </div>
+  <div *ngIf="profileForm.get('firstName').errors.minlength">
+    First Name must be 4 char long.
+  </div>
   </div>
   <label>
     Last Name:
