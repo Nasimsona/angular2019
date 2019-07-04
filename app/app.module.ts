@@ -17,6 +17,7 @@ import {appRoutes} from './routes.config';
 import { HeadingMessageComponent } from './heading-message/heading-message.component';
 import { MessageService } from './message.service';
 import { ReactiveformComponent } from './reactiveform/reactiveform.component';
+import { BuilderFormComponent } from './builder-form/builder-form.component';
 
 
 
@@ -28,7 +29,7 @@ import { ReactiveformComponent } from './reactiveform/reactiveform.component';
       appRoutes,
       { enableTracing: true } // <-- debugging purposes only
     ) ],
-  declarations: [ AppComponent, HelloComponent, EmployeeListComponent, TemplatedrivenComponent, HeadingMessageComponent, ReactiveformComponent ],
+  declarations: [ AppComponent, HelloComponent, EmployeeListComponent, TemplatedrivenComponent, HeadingMessageComponent, ReactiveformComponent, BuilderFormComponent ],
   bootstrap:    [ AppComponent ],
   providers: [EmployeeService,HttpClientModule, MessageService]
 })
