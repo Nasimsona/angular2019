@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder,Validators } from '@angular/forms';
+import { FormBuilder,Validators,FormGroup } from '@angular/forms';
 @Component({
   selector: 'app-builder-form',
   templateUrl: './builder-form.component.html',
@@ -9,31 +9,31 @@ export class BuilderFormComponent implements OnInit {
 
 constructor(private fb: FormBuilder) { }
 
-
+private employeeForm :FormGroup;
 
   ngOnInit() {
-  }
-addAlias() {
-  this.aliases.push(this.fb.control(''));
-}
-
-
-    profileForm = this.fb.group({
-    firstName: ['', Validators.required],
-    lastName: [''],
-    address: this.fb.group({
-      street: [''],
-      city: [''],
-      state: [''],
-      zip: ['']
-      }),
-    aliases: this.fb.array([
-      this.fb.control('')
+  this.employeeForm = this.fb.group({
+    fullName: ['', [Validators.required]],
+    contactPreference: ['email'],
+    // Other Form Controls..
+    // Create skills FormArray using the injected FormBuilder
+    // class array() method. At the moment, in the created
+    // FormArray we only have one FormGroup instance that is
+    // returned by addSkillFormGroup() method
+    skills: this.fb.array([
+      this.addSkillFormGroup()
     ])
   });
 
-  get aliases() {
-  return this.profileForm.get('aliases') as FormArray;
+  // Rest of the code
 }
+
+addSkillFormGroup(): FormGroup {
+  return this.fb.group({
+    skillName: ['', Validators.required],
+    experienceInYears: ['', Validators.required],
+    proficiency: ['', Validators.required]
+  });
+  
 
 }

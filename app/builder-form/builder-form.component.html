@@ -1,11 +1,10 @@
-<div formArrayName="aliases">
-  <h3>Aliases</h3> <button (click)="addAlias()">Add Alias</button>
 
-  <div *ngFor="let address of aliases.controls; let i=index">
-    <!-- The repeated alias template -->
-    <label>
-      Alias:
-      <input type="text" [formControlName]="i">
-    </label>
+<div class="well">
+  <div formArrayName="skills">
+    <div formGroupName="0">
+      <!-- Skill Name Label & Form Control HTML
+        Experience Label & Form Control HTML
+        Proficiency Label & Form Control HTML -->
+    </div>
   </div>
 </div>
