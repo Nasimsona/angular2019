@@ -34,6 +34,6 @@ addSkillFormGroup(): FormGroup {
     experienceInYears: ['', Validators.required],
     proficiency: ['', Validators.required]
   });
-  
+}
 
 }

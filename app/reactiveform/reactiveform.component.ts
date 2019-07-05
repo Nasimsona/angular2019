@@ -10,7 +10,7 @@ export class ReactiveformComponent {
 
 profileForm = new FormGroup({
     firstName: new FormControl('',[Validators.required,Validators.minLength(4)]),
-    lastName: new FormControl(''),
+    lastName: new FormControl('',[Validators.minLength(4)]),
   });
 
 onSubmit(){
